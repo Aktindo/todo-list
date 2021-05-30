@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="ToList" property="og:title" />
+    <meta content="A quick utility to add todos" property="og:description" />
+    <meta content="https://aktindo.me/todo-list" property="og:url" />
+    <meta content="#1abc9c" data-react-helmet="true" name="theme-color" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <title>Todo List</title>
+  </head>
+  <body class="bg-base-100 text-base-content">
+    <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
+      <div class="flex-none px-2 mx-2">
+        <span class="text-lg"> Todo List </span>
+      </div>
+      <div class="flex-1 px-2 mx-2">
+        <div class="items-stretch lg:flex">
+          <a class="btn btn-ghost btn-sm rounded-btn" href="/"
+            ><span class="material-icons">home</span></a
+          >
+        </div>
+      </div>
+      <div class="flex-none">
+        <button
+          class="btn btn-ghost btn-sm rounded-btn"
+          onclick="changeTheme()"
+        >
+          <span id="themeIcon" class="material-icons">dark_mode</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="heading text-center my-10">
+      <h1 class="text-4xl mt-10 mb-2">Todo List</h1>
+      <p>Have some todos? Quicky add them here!</p>
+    </div>
+
+    <div id="errors" class="errors"></div>
+
+    <div class="content-container m-5">
+      <div class="content max-w-4xl m-auto float-none">
+        <div class="form-control">
+          <div class="relative">
+            <input
+              id="itemInput"
+              type="text"
+              placeholder="Name..."
+              class="w-full pr-16 input input-success"
+              minlength=""
+            />
+            <button
+              onclick="saveItem()"
+              class="absolute right-0 top-0 rounded-l-none btn btn-primary"
+            >
+              Add Item
+            </button>
+          </div>
+        </div>
+        <div id="items" class="items my-10"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
