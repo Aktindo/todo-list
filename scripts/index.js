@@ -26,12 +26,12 @@ function getItems() {
           </p>
         </div>
         <div class="justify-between">          
-          <button class="btn btn-success" onclick="handleItemCompleted(${index}); getAllPendingTodos();">
+          <button class="btn btn-success" onclick="handleItemCompleted(${index}); getItems()">
             <span class="material-icons text-white">
               done
             </span>
           </button>
-          <button id="${index}" class="btn btn-error" onclick="deleteItem(this.id)">
+          <button id="${index}" class="btn btn-error" onclick="deleteItem(this.id);">
             <span class="material-icons text-white">
               delete
             </span>
@@ -42,7 +42,7 @@ function getItems() {
     });
 
     itemsHtml += `
-    <p id="pendingTodos" class="m-auto text-center my-8">a</p>
+    <p id="pendingTodos" class="m-auto text-center my-8"></p>
     <div class="flex justify-center">
       <div class="refresh-btn mr-2">
         <button class="btn btn-primary btn-outline" onclick="window.location.reload()">Refresh</button>
