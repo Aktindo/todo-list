@@ -10,9 +10,27 @@ body {
   background-color: rgb(4, 165, 133);
 }
 
+.btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .item-container {
   height: 100px;
   line-height: 100px;
+}
+
+.item {
+  transition: all 0.3s ease;
+}
+
+.item-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
 
 .bounce-in {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="ToList" property="og:title" />
+    <meta content="TodoList" property="og:title" />
     <meta content="A quick utility to add todos" property="og:description" />
     <meta content="https://aktindo.me/todo-list" property="og:url" />
     <meta content="#1abc9c" data-react-helmet="true" name="theme-color" />
@@ -20,7 +20,8 @@
   </head>
   <body class="bg-base-100 text-base-content">
     <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content">
-      <div class="flex-none px-2 mx-2">
+      <div class="flex items-center px-2 mx-2">
+        <img src="./img/TodoList-Logo.svg" alt="TodoList-Logo" width="40px" />
         <span class="text-lg"> Todo List </span>
       </div>
       <div class="flex-1 px-2 mx-2">
@@ -59,6 +60,7 @@
               minlength=""
             />
             <button
+              id="itemAddBtn"
               onclick="saveItem()"
               class="absolute right-0 top-0 rounded-l-none btn btn-primary"
             >
@@ -70,7 +72,6 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/feather-icons"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
